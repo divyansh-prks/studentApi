@@ -4,6 +4,7 @@ go 1.22.2
 
 require (
 	github.com/BurntSushi/toml v1.4.0 // indirect
+	github.com/aws/smithy-go v1.22.2
 	github.com/ilyakaznacheev/cleanenv v1.5.0 // indirect
 	github.com/joho/godotenv v1.5.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
