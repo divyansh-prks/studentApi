@@ -79,3 +79,23 @@ func GetById(storage storage.Storage) http.HandlerFunc {
 
 
 }
+
+
+
+func GetList(storage storage.Storage) http.HandlerFunc {
+	return func(w http.ResponseWriter , r *http.Request){
+		slog.Info("getting a list of students")
+
+		student , err := storage.GetStudents()
+		if err != nil {
+			response.WriteJson(w , http.StatusInternalServerError , err)
+			return 
+		}
+		response.WriteJson(w , http.StatusOK , student)
+
+
+		
+	
+	}
+
+}
